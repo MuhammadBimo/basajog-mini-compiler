@@ -1,0 +1,51 @@
+// =========================================================
+//  Program Demo Lengkap - BasaJog Mini Compiler
+//  Muhammad Bimo Krisyono - 06TPLP014
+//  Sakabehe ditulis nganggo Basa Jawa (Ngayogyakarta)
+// =========================================================
+
+// ---------- 1. Variabel & Operasi Etung-etungan ----------
+dawa   = 10
+amba   = 5
+jembar = dawa * amba
+tulis("Jembare pesagi:")
+tulis(jembar)
+
+// ---------- 2. Constant Folding (bakal dioptimasi compiler) ----------
+gunggung = 2 + 3 * 4
+tulis(gunggung)
+
+// ---------- 3. Pamilihan yen / liyane ----------
+biji = 80
+yen (biji >= 75) {
+    tulis("Lulus")
+} liyane {
+    tulis("Ngambali")
+}
+
+// ---------- 4. Fungsi & Bali ----------
+fungsi pangkat(n) {
+    bali n * n
+}
+
+fungsi wuwuh(a, b) {
+    bali a + b
+}
+
+asilPangkat = pangkat(6)
+tulis(asilPangkat)
+
+asilWuwuh = wuwuh(15, 25)
+tulis(asilWuwuh)
+
+// ---------- 5. Pengulangan baleni ----------
+cacah = 1
+baleni (cacah <= 5) {
+    tulis(cacah)
+    cacah = cacah + 1
+}
+
+// ---------- 6. Dead Code Elimination (blok iki dibusak compiler) ----------
+yen (salah) {
+    tulis("Larik iki ora bakal tau dilakoni")
+}

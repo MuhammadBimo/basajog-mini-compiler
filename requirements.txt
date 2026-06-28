@@ -1,0 +1,9 @@
+# requirements.txt — Library pihak katelu kanggo BasaJog Mini Compiler
+# Pasang nganggo : pip install -r requirements.txt
+#
+# Cathetan:
+#   - 're' lan 'sys' iku modul bawaan Python, ora perlu dipasang.
+#   - matplotlib bakal narik dependensi liyane (numpy, pillow, lsp.) kanthi otomatis.
+
+matplotlib==3.10.9
+networkx==3.4.2

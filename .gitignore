@@ -1,0 +1,13 @@
+# Virtual environment (jangan di-upload, ukurannya besar & spesifik mesin)
+COM_venv/
+
+# Cache Python (dibuat ulang otomatis)
+__pycache__/
+*.pyc
+
+# Output gambar yang di-generate otomatis tiap menjalankan main.py
+visual_ast.png
+
+# Folder editor & tooling (tidak perlu di-share)
+.vscode/
+.claude/
