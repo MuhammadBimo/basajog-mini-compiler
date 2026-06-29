@@ -11,3 +11,8 @@ visual_ast.png
 # Folder editor & tooling (tidak perlu di-share)
 .vscode/
 .claude/
+
+# File hasil build PyInstaller (exe di-share lewat GitHub Releases, bukan di repo)
+build/
+dist/
+*.spec
