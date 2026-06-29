@@ -39,23 +39,47 @@ File pendukung:
 
 ## Cara Menjalankan
 
-### 1. Instalasi
-Dobel-klik `install.bat`, atau lewat terminal:
+Ada **2 cara**. Cara A paling cepat (tanpa install apa pun).
+
+### Cara A — Pakai File EXE (TANPA install Python) ⭐
+
+File `basajog.exe` sudah tersedia di repo ini (juga bisa diunduh di bagian
+[**Releases**](../../releases)). Tidak perlu Python, matplotlib, atau apa pun.
+
+1. Download / siapkan file `basajog.exe` dan `program.bj` dalam satu folder.
+2. Buka terminal (CMD/PowerShell) di folder itu, lalu ketik:
+   ```bat
+   basajog.exe program.bj
+   ```
+   Atau cukup **dobel-klik** `basajog.exe` untuk mode interaktif (mengetik program langsung).
+
+> Catatan: di akhir akan muncul jendela gambar pohon AST. Tutup jendelanya untuk mengakhiri program.
+
+### Cara B — Dari Source Code Python
+
+**1. Instalasi** — dobel-klik `install.bat`, atau lewat terminal:
 ```bat
 install.bat
 ```
 Otomatis membuat virtual environment `COM_venv` dan memasang `matplotlib` & `networkx`.
 
-### 2. Aktifkan virtual environment
+**2. Aktifkan virtual environment:**
 ```bat
 COM_venv\Scripts\activate
 ```
 
-### 3. Perintah utama
+**3. Perintah utama:**
 ```bat
 python main.py program.bj      :: jalankan compiler penuh (6 tahap)
 python evaluator.py program.bj :: jalankan interpreter (lihat output asli)
 python test_compiler.py        :: jalankan 15 kasus uji
+```
+
+### Membuat ulang file EXE sendiri (opsional)
+```bat
+pip install pyinstaller
+pyinstaller --onefile --name basajog main.py
+:: hasilnya ada di folder dist\basajog.exe
 ```
 
 ## Contoh Program
